@@ -12,12 +12,12 @@ namespace CauculationByString
     {
         private string userInput;
 
-        private List<string> Delimiters = new List<string>() { "," };
+        private List<string> delimiters = new List<string>() { "," };
 
 
         public string[] GetDelimiters()
         {
-            return Delimiters.ToArray();
+            return delimiters.ToArray();
         }
 
         private void RemoveDoubleSlash(string input)
@@ -32,7 +32,7 @@ namespace CauculationByString
 
             if (delimitersInputs == null)
             {
-                return Delimiters;
+                return delimiters;
             }
             else
             {
@@ -49,14 +49,14 @@ namespace CauculationByString
                     substringsInBrackets.Add(match.Value.Trim(new char[] {'[',']'}));
                 }
 
-                Delimiters = substringsInBrackets;
-                return Delimiters;
+                delimiters = substringsInBrackets;
+                return delimiters;
 
             }
             else
             {
-                Delimiters = new List<string>() { userInput };
-                return Delimiters;
+                delimiters = new List<string>() { userInput };
+                return delimiters;
             }
         }
 
