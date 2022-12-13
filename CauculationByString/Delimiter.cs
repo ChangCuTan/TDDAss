@@ -12,12 +12,12 @@ namespace CauculationByString
     {
         private string userInput;
 
-        public List<string> Delimiters = new List<string>() { "," };//default
+        private List<string> Delimiters = new List<string>() { "," };
 
 
-        public List<string> GetDelimiters()
+        public string[] GetDelimiters()
         {
-            return Delimiters;
+            return Delimiters.ToArray();
         }
 
         private void RemoveDoubleSlash(string input)

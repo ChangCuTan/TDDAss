@@ -52,12 +52,12 @@ namespace CauculationByString
             if (int.TryParse(beforeNewLine, out beforeNewlineNumber))
             {
                 listOfIntegerInString.Add(beforeNewlineNumber);
-                listOfIntegerInString.AddRange(ProcessStringToListInteger(afterNewLine, _delimiter.Delimiters.ToArray()));
+                listOfIntegerInString.AddRange(ProcessStringToListInteger(afterNewLine, _delimiter.GetDelimiters()));
 
             }
             else
             {
-                listOfIntegerInString.AddRange(ProcessStringToListInteger(afterNewLine, _delimiter.Delimiters.ToArray()));
+                listOfIntegerInString.AddRange(ProcessStringToListInteger(afterNewLine, _delimiter.GetDelimiters()));
             }
 
             listOfIntegerInString = RemoveIntMoreThan1000(listOfIntegerInString);
