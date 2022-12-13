@@ -15,7 +15,7 @@ namespace CauculationByString
             _delimiter = new Delimiter();
         }
 
-        private void setInput(string userInput)
+        private void SetInput(string userInput)
         {
             input = userInput;
         }
@@ -24,7 +24,7 @@ namespace CauculationByString
 
         public int Add(string userInput)
         {
-            setInput(userInput);
+            SetInput(userInput);
 
 
             List<int> listOfIntegerInString = new List<int>();
